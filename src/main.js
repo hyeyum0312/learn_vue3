@@ -2,10 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 
-const app = createApp(App).mount('#app');
+createApp(App).mount('#app');
 
-app.provide('app-message', 'app message입니다.');
-app.config.globalProperties.msg = 'hello';
+// app.provide('app-message', 'app message입니다.');
+// app.config.globalProperties.msg = 'hello';
 
 // 컴포넌트 전역등록 예시
 // import AppCard from '@/components/AppCard.vue';
