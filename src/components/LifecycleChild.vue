@@ -9,9 +9,11 @@ export default {
   components: {},
   setup() {
     console.log('[child] setup');
+
     onBeforeMount(() => {
       console.log('[child] onBeforeMount');
     });
+
     onMounted(() => {
       console.log('[child] onMounted');
     });
