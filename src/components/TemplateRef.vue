@@ -32,32 +32,32 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
-import TemplateRefChild from './TemplateRefChild.vue'
+import { ref, onMounted } from 'vue';
+import TemplateRefChild from './TemplateRefChild.vue';
 export default {
   components: { TemplateRefChild },
   setup() {
-    const input = ref(null)
+    const input = ref(null);
     onMounted(() => {
-      input.value.value = 'Hello world'
-      console.log('onMounted', input.value)
+      input.value.value = 'Hello world';
+      console.log('onMounted', input.value);
       //   itemRefs.value.forEach((item) => {
       //     console.log(item, item.textContent)
       //   })
 
-      itemRefs.value.forEach((item) => {
-        console.log(item)
-      })
+      itemRefs.value.forEach(item => {
+        console.log(item);
+      });
 
-      console.log('child message', child.value.message)
-      child.value.sayHello()
-    })
-    const fruits = ref(['사과', '딸기', '포도'])
-    const itemRefs = ref([])
-    const child = ref(null)
-    return { input, fruits, itemRefs, child }
-  }
-}
+      console.log('child message', child.value.message);
+      child.value.sayHello();
+    });
+    const fruits = ref(['사과', '딸기', '포도']);
+    const itemRefs = ref([]);
+    const child = ref(null);
+    return { input, fruits, itemRefs, child };
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

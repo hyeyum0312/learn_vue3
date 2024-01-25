@@ -1,20 +1,19 @@
 <template>
-  <div class="container py-4"></div>
+  <div class="container py-4">{{ sayHello }}</div>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-  components: {},
-  setup() {
-    const message = ref('hello')
-    const sayHello = () => {
-      console.log('sayHello', message)
-      alert(message.value)
-    }
-    return { message, sayHello }
-  }
-}
+<script setup>
+import { ref } from 'vue';
+const message = ref('hello');
+const sayHello = () => {
+  console.log('sayHello', message);
+  // alert(message.value);
+};
+
+defineExpose({
+  sayHello,
+  message,
+});
 </script>
 
 <style lang="scss" scoped></style>

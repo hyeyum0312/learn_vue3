@@ -1,19 +1,21 @@
 <template>
   <main>
     <TemplateRef></TemplateRef>
+    <ScriptSetup></ScriptSetup>
   </main>
 </template>
 
 <script>
-import {} from 'vue'
+import {} from 'vue';
 // import LifecycleHooks from '@/components/LifecycleHooks.vue';
-import TemplateRef from './TemplateRef.vue'
+import ScriptSetup from './ScriptSetup.vue';
+import TemplateRef from './TemplateRef.vue';
 export default {
-  components: { TemplateRef },
+  components: { TemplateRef, ScriptSetup },
   setup() {
-    return {}
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

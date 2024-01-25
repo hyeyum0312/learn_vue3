@@ -13,16 +13,16 @@
 
 <script>
 // import { onBeforeMount, onMounted, ref, onBeforeUpdate, onUpdated } from 'vue';
-import { ref } from 'vue'
-import LifecycleChild from './LifecycleChild.vue'
+import { ref } from 'vue';
+import LifecycleChild from './LifecycleChild.vue';
 
 export default {
   components: { LifecycleChild },
   setup() {
-    console.log('setup')
-    const inputRef = ref(null)
-    const message = ref('')
-    const visible = ref(false)
+    console.log('setup');
+    const inputRef = ref(null);
+    const message = ref('');
+    const visible = ref(false);
 
     // Mounting: 컴포넌트 삽입 , onBeforeMount, onMounted
     // 초기 렌더링 직전에 DOM을 변경하고자한다면 이 단계에서 실행한다.
@@ -58,17 +58,17 @@ export default {
       LifecycleHooks.vue:46 DOM contents hyeyeon
     **/
 
-    return { inputRef, message, visible }
+    return { inputRef, message, visible };
   },
 
   // 예전에 이런것이 있었다.
   beforeCreate() {
-    console.log('beforeCreate')
+    console.log('beforeCreate');
   },
   created() {
-    console.log('created')
-  }
-}
+    console.log('created');
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
